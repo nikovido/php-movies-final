@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador | PHP-MOVIES</title>
+    <!--aos animaciones-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos_bootstrap.css">
+
+   <link rel="stylesheet" href="https://use.typekit.net/qwz5esp.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="container-fluid sticky-top bgYellow m-0 p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../index.html">
+                    <i class="fas fa-film" aria-hidden="true"></i>
+                    <span>PHP-Movies</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bgYellow" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" aria-current="page"
+                                href="../index.html#tendencias">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" href="./registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" href="./iniciosesion.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <main id="mainAdministrador" class="mainDetalle">
+            <section class="container mt-4 mb-5">
+                <h1>Gestión de peliculas</h1>
+                <p>En esta sección se podra llevar a cabo la gestión de las peliculas del portal via una API en PHP.</p>
+                <!-- Formulario para dar de alta una pelicula nueva-->
+    
+                <form id="formPelicula" action="" method="post" enctype="multipart/form-data" class="row row-cols-lg-auto g-3 align-items-center">
+                    <div class="col-12 col-md-6">
+                        <input class="form-control d-none" type="number" name="id" id="id">
+                        <label for="titulo">Titulo</label>
+                        <input class="form-control" type="text" name="titulo" id="titulo">
+                    </div>
+                   
+                    <div class="col-6 col-md-4">
+                        <label for="genero">Genero</label>
+                        <input class="form-control" type="text" name="genero" id="genero">
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <label for="duracion">Duración</label>
+                        <input class="form-control" type="text" name="duracion" id="duracion">
+                    </div>
+                  
+                    <div class="col-12 col-md-8">
+                        <label for="imagen">Imagen</label>
+                        <input class="form-control" type="file" name="imagen" id="imagen">
+                    </div>
+                    <div class="col-12">
+                        <input class="align-self-center btn btn-outline-secondary btn-md" type="submit" value="Grabar Pelicula">
+                    </div>
+                </form>
+            </section>
+            <hr>
+            <!--aca se van a mostrar las peliculas y las acciones modificar y dar de baja-->
+            <section class="container mt-5 mb-5 overflow-auto">
+                <h2>Listado de Peliculas</h2>
+                <p class="small">Para ver todos los datos de las peliculas, elija una y toque modificar</p>
+                <table class="table table-dark table-striped" id="tablePeliculas">
+                    <thead>
+                        <tr>
+                            <th>ID Pelicula</th>
+                            <th>Titulo</th>
+                            <th>Duracion</th>
+                            <th>Genero</th>
+                            <th>Imagen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTablePeliculas">
+                        <!--este es solo un ejemplo porque se va a llenar desde js
+                        <tr>
+                            <td>The Super Mario Bros. Movie (2023)</td>
+                            <td>3h 22m</td>
+                            <td>Animation, Family, Adventure, Fantasy, Comedy</td>
+                            <td><img width="150px" src="../assets/img/mario.jpg" alt="mario pelicula 2023"></td>
+                            
+                        </tr>-->
+                    </tbody>
+                </table>
+            </section>
+    
+        </main>
+
+
+    <footer class="container-fluid bgYellow">
+        <div class="contenerdorFooter container-fluid row pt-5 mt-3">
+            <nav class="mb-0 b-0">
+                <ul
+                    class="d-flex flex-column flex-lg-row sinLista gap-3 justify-content-center align-items-center align-middle">
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Términos y
+                            condiciones</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Preguntas
+                            frecuentes</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Ayuda</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none administradorPeliculas"
+                            href=".administrador.html">Administrador Peliculas</a></li>
+                </ul>
+            </nav>
+            <a href="#mainAdministrador" class="position-fixed sticky-bottom bottom-0 end-0">
+                <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            </a>
+            <div class="footerLegales align-self-center">
+                <p class="text-center fw-normal text-dark ">© 2024 PHP Movies. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validacion_administrador.js"></script>
+    <script src="../js/get_modificar_delete_peliculas.js"></script>
+    <script src="../js/post_put_pelicula.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio sesión | PHP-MOVIES</title>
+    <!--aos animaciones-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <!-- bootstrap-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos_bootstrap.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+
+<body id="arriba" class="bodyRegistrarse">
+    <header class="container-fluid sticky-top bgYellow m-0 p-0">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3" href="../index.html">
+                    <i class="fas fa-film" aria-hidden="true"></i>
+                    <span>PHP-Movies</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bgYellow " id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" aria-current="page" href="../index.html#tendencias">Tendencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" href="../pages/registrarse.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" href="../pages/iniciosesion.html">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionRegistrarse formulario container d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+            <!--pongo get ya que en github pages da error el method post-->
+            <form class="contenedorFormulario seccionInicio g-3 mt-5" id="form" action="" method="get">
+                <h2 class="tituloRegistrarse mt-3">Iniciar Sesión</h2>
+                <div class="mb-2">
+                    <input type="email" placeholder="Email" id="email" name="email" class="inputEstilo">
+                    <div id="error-email" class="error-text text-danger"></div>
+                </div>
+                <div class="mb-2">
+                    <input type="password" placeholder="Contraseña" id="password" name="password" class="inputEstilo">
+                    <div id="error-password" class="error-text text-danger"></div>
+                </div>
+                <div class="mb-2">
+                    <input class="btn btn-outline-secondary btn-md" type="submit" value="Iniciar Sesión">
+                </div>
+                <div class="mb-3">
+                    <a id="ayuda" class="ayuda fw-bold text-light" href="registrarse.html">Registrarse</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="container-fluid bgYellow">
+        <div class="contenerdorFooter container-fluid pt-5 mt-3 bgYellow">
+            <nav class="mb-0 b-0 bgYellow">
+                <ul class="d-flex flex-column flex-lg-row sinLista gap-3 justify-content-center align-items-center align-middle">
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Términos y condiciones</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Preguntas frecuentes</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none" href="">Ayuda</a></li>
+                    <li class="listaItem"><a class="text-dark fs-4 text-decoration-none administradorPeliculas" href="./pages/administrador.html">Administrador Peliculas</a></li>
+                </ul>
+            </nav>
+            <div class="footerLegales justify-content-center">
+                <p class="fw-normal text-dark text-center">© 2024 PHP Movies. Todos los derechos reservados.</p>
+            </div>
+            <a href="#arriba" class="position-fixed fixed-bottom bottom-0 end-0 flecha">
+                <img src="../assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/valida_simple_inicio.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

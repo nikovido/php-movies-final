@@ -1,0 +1,325 @@
+/*configuracion de variables*/
+
+@import url("https://use.typekit.net/qwz5esp.css");
+
+:root {
+    --main-color: #f3f3f3;
+    --secondary-color: #161516;
+    --third-color: yellow;
+    --third-color-t: #840404bc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+
+    hr {
+        color: var(--third-color);
+    }
+}
+
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: solid 1px yellow;
+    width: 80vw;
+    margin: auto;
+
+}
+
+header {
+    height: 10vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    nav {
+        height: 100%;
+    }
+}
+
+footer {
+    height: 35vh;
+
+    nav {
+        height: 100%;
+    }
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 1200px){
+    h1{
+        font-size: 3rem;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    header {
+        height: initial;
+
+        nav {
+            height: initial;
+        }
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+
+    footer {
+        height: 55vh;
+        nav {
+            height: initial;
+        }
+    }
+}
+
+
+
+.bgYellow {
+    background-color: var(--third-color);
+}
+
+
+
+
+
+/* -------------- estilos del HOME ----------------------*/
+
+
+header nav div div ul li a:hover {
+    font-weight: bolder;
+}
+
+header nav div a span {
+    font-family: "tt-autonomous", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hero {
+    height: 90vh;
+    background: linear-gradient(to bottom, #000000a3, #000000a3), url("../assets/img/banner-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .contenedorTitulos {
+        text-align: center;
+
+        /*efecto blur a un contenedor*/
+        backdrop-filter: blur(10px);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 5px;
+        gap: 20px;
+    }
+}
+
+.imgTendencia:hover {
+    outline: 2px solid yellow;
+    border-radius: 5px;
+    transition: .1s ease;
+}
+
+
+/* buscador  */
+.inputEstilo, .form-control{
+    font-weight: 400;
+    padding: 5px 10px;
+    outline: none;
+    background: #FFFFFF;
+    color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 5px;
+}
+
+.inputEstilo:focus, .form-control:focus {
+    background-color: hsl(60, 100%, 50%);
+    transition: .1s ease;
+}
+
+.inputEstilo:hover, .form-control:hover {
+    background-color: yellow;
+    transition: .1s ease;
+}
+
+/* galería TENDENCIAS */
+.card {
+    position: relative;
+    background-color: transparent;
+    background-clip: border-box;
+    border: none;
+}
+
+.card-img-overlay {
+    display: none;
+}
+
+.card:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--third-color);
+    box-shadow: 0px 2px 8px 0px rgba(209, 224, 75, 0.5), 0px 4px 16px 0px rgba(224, 214, 75, 0.5);
+    transform: scale(0.8);
+    transition: all 0.8s;
+
+    .img-card {
+        filter: blur(8px);
+
+        box-shadow: 0px 9px 30px rgba(255, 149, 5, 0.3);
+    }
+
+    .card-img-overlay {
+        display: inline-block;
+        /*justify-content: center;
+        align-items: center;
+        margin: 0;*/
+        background: linear-gradient(to bottom, #24242411, #24242473);
+
+        .card-title {
+            position: relative;
+            text-shadow: 1px 2px 21px #000000;
+            top: 50%;
+            bottom: 50%;
+
+
+
+        }
+    }
+}
+
+.carousel-item {
+    padding-bottom: 40px;
+}
+
+.border {
+    border: 2px solid #dee2e6 !important;
+}
+
+.w-25 {
+    width: 150px !important;
+}
+
+
+/*--------- FOOTER -------------*/
+footer div nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+
+}
+
+.peliculasAclamadas,
+.peliculasTendencias {
+    i {
+        color: var(--third-color);
+    }
+}
+
+.buscador,
+.peliculasAclamadas,
+.peliculasTendencias {
+    padding-top: 70px;
+}
+
+.contenerdorFooter {
+    .footerLegales {
+        padding-top: 30px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+}
+
+.flecha {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+/*-----------estilos de DETALLE--------------*/
+.altoIframe {
+    height: 350px;
+}
+
+.sinLista {
+    list-style: none;
+}
+
+/* ---------- estilos REGISTRARSE------------ */
+.bodyRegistrarse {
+    background: linear-gradient(to bottom, #24242473, #24242473), url("../assets/img/banner_pelis.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    .mainFormulario {
+        height: 100vh;
+
+        .seccionRegistrarse {
+            .contenedorFormulario {
+                height: 90vh;
+                text-align: center;
+                /*efecto blur a un contenedor*/
+                background-color: var(--secondary-color);
+                width: 70%;
+                margin: 5px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            }
+        }
+    }
+}
+
+/* estilo inicio sesion */
+
+.contenedorFormulario{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /*efecto blur a un contenedor*/
+    background-color: var(--secondary-color);
+    width: 70%;
+    margin: 5px;
+    border-radius: 10px;
+    
+}
+.seccionInicio {
+    height: 50vh;
+    
+}
+
+.text-danger{
+    color: #cf6678 !important;
+}
